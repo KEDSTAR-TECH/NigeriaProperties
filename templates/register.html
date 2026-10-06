@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account - NigeriaProperty</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a class="logo" href="/">
+        NigeriaProperty
+    </a>
+
+    <a href="/login">
+        Login
+    </a>
+
+</header>
+
+
+<main class="form-page">
+
+    <form
+        class="form-card"
+        action="/register"
+        method="POST"
+    >
+
+        <h1>Create account</h1>
+
+
+        <label>
+            Full name
+
+            <input
+                type="text"
+                name="full_name"
+                required
+            >
+        </label>
+
+
+        <label>
+            Email
+
+            <input
+                type="email"
+                name="email"
+                required
+            >
+        </label>
+
+
+        <label>
+            Password
+
+            <input
+                type="password"
+                name="password"
+                minlength="6"
+                required
+            >
+        </label>
+
+
+        <label>
+            Account type
+
+            <select name="role" required>
+
+                <option value="user">
+                    Property seeker
+                </option>
+
+                <option value="landlord">
+                    Landlord
+                </option>
+
+                <option value="agent">
+                    Agent
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <button
+            class="btn"
+            type="submit"
+        >
+            Create account
+        </button>
+
+
+        <p>
+            Already have an account?
+
+            <a href="/login">
+                Login
+            </a>
+        </p>
+
+    </form>
+
+</main>
+
+</body>
+</html>

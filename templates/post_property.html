@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Property - NigeriaProperty</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a class="logo" href="/">NigeriaProperty</a>
+
+    <nav>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </nav>
+</header>
+
+<main class="form-page">
+
+    <form class="form-card"
+          action="/post-property"
+          method="POST"
+          enctype="multipart/form-data">
+
+        <h1>Post a property</h1>
+
+        <label>
+            Property title
+            <input
+                type="text"
+                name="title"
+                placeholder="e.g. 3 Bedroom Duplex"
+                required>
+        </label>
+
+        <label>
+            Listing type
+            <select name="listing_type" required>
+                <option value="rent">For rent</option>
+                <option value="sale">For sale</option>
+            </select>
+        </label>
+
+        <label>
+            Price (₦)
+            <input
+                type="number"
+                name="price"
+                placeholder="e.g. 2500000"
+                min="0"
+                required>
+        </label>
+
+        <label>
+            Location
+            <input
+                type="text"
+                name="location"
+                placeholder="e.g. Owerri, Imo State"
+                required>
+        </label>
+
+        <label>
+            Photos
+            <input
+                type="file"
+                name="photos"
+                accept="image/*"
+                multiple
+                required>
+        </label>
+
+        <label>
+            Video walkthrough
+            <input
+                type="file"
+                name="video"
+                accept="video/*">
+        </label>
+
+        <button class="btn" type="submit">
+            Submit property
+        </button>
+
+    </form>
+
+</main>
+
+</body>
+</html>

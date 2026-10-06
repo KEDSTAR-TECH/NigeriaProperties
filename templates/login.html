@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - NigeriaProperty</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a class="logo" href="/">
+        NigeriaProperty
+    </a>
+
+    <a href="/register">
+        Create account
+    </a>
+
+</header>
+
+
+<main class="form-page">
+
+    <form
+        class="form-card"
+        action="/login"
+        method="POST"
+    >
+
+        <h1>Login</h1>
+
+
+        <label>
+            Email
+
+            <input
+                type="email"
+                name="email"
+                required
+            >
+        </label>
+
+
+        <label>
+            Password
+
+            <input
+                type="password"
+                name="password"
+                required
+            >
+        </label>
+
+
+        <button
+            class="btn"
+            type="submit"
+        >
+            Login
+        </button>
+
+
+        <p>
+            No account?
+
+            <a href="/register">
+                Register
+            </a>
+        </p>
+
+    </form>
+
+</main>
+
+</body>
+</html>
